@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <item
+        android:id="@+id/length"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="长度"
+
+        />
+    <item
+        android:id="@+id/volume"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="体积"
+
+        />
+    <item
+        android:id="@+id/binary_conversion"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="进制转化"
+
+        />
+</menu>

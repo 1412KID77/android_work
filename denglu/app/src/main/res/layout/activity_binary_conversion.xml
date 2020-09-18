@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".binary_conversion"
+
+    >
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/input_binary_spinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        tools:ignore="all"
+        android:entries="@array/binary_value"
+        />
+    <EditText
+        android:id="@+id/input_binary_editText"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
+
+        android:digits="1234567890abcdef"
+        android:gravity="center_horizontal"
+        android:hint="请输入需要转化的数"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/input_binary_spinner"
+
+
+        app:layout_constraintVertical_bias="0.216"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:text="结果展示"
+        android:textSize="30dp"
+
+        />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/showtext"
+        >
+        <TextView
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="二进制"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="八进制"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="十进制"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:text="十六进制"
+            android:layout_width="wrap_content"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/showtext"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_light"
+            android:id="@+id/binary"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:id="@+id/octal_number_system"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:id="@+id/decimal_system"
+            />
+        <TextView
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright"
+            android:id="@+id/hexadecimal"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/warning"
+        android:text=""
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showtext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        android:textSize="50dp"
+        android:textColor="@android:color/holo_red_light"
+
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

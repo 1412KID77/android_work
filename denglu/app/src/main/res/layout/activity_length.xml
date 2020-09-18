@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".volume"
+    >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        tools:ignore="MissingConstraints">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t"
+        android:text = "选择单位"
+
+        tools:ignore="all" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/input_Spinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t"
+        tools:ignore="MissingConstraints"
+        android:entries="@array/item"
+
+        >
+
+
+
+    </Spinner>
+
+        <EditText
+            android:id="@+id/input_EditText"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:digits="1234567890."
+            android:gravity="center_horizontal"
+            android:hint="请输入需要转化的数"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toRightOf="@+id/input_Spinner"
+
+
+            tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t2"
+        android:text = "选择单位"
+        app:layout_constraintTop_toBottomOf="@id/input_EditText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="all" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/output_spinner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="MissingConstraints"
+        android:entries="@array/item"
+        />
+
+    <TextView
+        android:id="@+id/output_textview"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+
+
+        android:gravity="center"
+        android:text="转化后的数"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/output_spinner"
+        app:layout_constraintTop_toTopOf="@id/input_EditText"
+        app:layout_constraintVertical_bias="0.216"
+        tools:ignore="MissingConstraints"
+
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/change"
+        android:text="转化"
+        app:layout_constraintTop_toBottomOf="@+id/output_textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

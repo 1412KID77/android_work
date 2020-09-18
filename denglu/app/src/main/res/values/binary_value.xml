@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string-array name="binary_value">
+        <item>请选择</item>>
+        <item>二进制</item>
+
+        <item>八进制</item>
+        <item>十进制</item>
+        <item>十六进制</item>
+    </string-array>
+
+</resources>

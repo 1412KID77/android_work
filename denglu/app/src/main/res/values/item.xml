@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="item">
+        <item id="kilomiter">千米</item>
+        <item id="">米</item>
+        <item>分米</item>
+        <item>厘米</item>
+        <item>毫米</item>
+        <item>微米</item>
+        <item>纳米</item>
+
+        <item>光年</item>
+
+        <item>英寸</item>
+        <item>英尺</item>
+        <item>英里</item>
+        <item>海里</item>
+        <item>英寻</item>
+        <item>弗隆</item>
+        <item>密耳</item>
+
+        <item>里</item>
+        <item>丈</item>
+        <item>尺</item>
+        <item>分</item>
+        <item>厘</item>
+        <item>毫</item>
+
+
+    </string-array>
+
+
+</resources>
