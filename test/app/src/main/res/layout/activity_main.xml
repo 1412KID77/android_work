@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/write_data"
+        android:onClick="onWriteDataClick"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/write_date"
+        tools:ignore="OnClick" />
+
+    <Button
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/phone"
+        android:text="phone call"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textviewReceivedData"
         android:layout_width="wrap_content"
