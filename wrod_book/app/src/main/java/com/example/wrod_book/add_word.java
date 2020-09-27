@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class add_word extends AppCompatActivity {
     EditText worde;
@@ -28,13 +29,14 @@ public class add_word extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+ //       System.out.println("是否异常--------------------------------------------------");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_word);
 
-        worde = (EditText)findViewById(R.id.word);
-        vv = (EditText)findViewById(R.id.v);
-        notes = (EditText)findViewById(R.id.notes);
-        example = (EditText)findViewById(R.id.example);
+        worde = (EditText)findViewById(R.id.word_input);
+        vv = (EditText)findViewById(R.id.input_v);
+        notes = (EditText)findViewById(R.id.input_notes);
+        example = (EditText)findViewById(R.id.input_examples);
 
         result = (TextView)findViewById(R.id.result);
 
@@ -61,6 +63,10 @@ public class add_word extends AppCompatActivity {
 //插入操作
                     SQLiteDatabase db = MainActivity.dbHelper.getWritableDatabase();
                     db.insert(word.w.TABLE_NAME, null, values);
+                    Toast.makeText(add_word.this, "添加成功", Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(add_word.this, MainActivity.class);
+                    startActivity(intent);
 
                 }
                 else{
@@ -76,5 +82,6 @@ public class add_word extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
