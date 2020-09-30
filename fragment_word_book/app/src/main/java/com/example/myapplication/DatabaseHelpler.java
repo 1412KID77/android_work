@@ -1,4 +1,4 @@
-package com.example.wrod_book;
+package com.example.myapplication;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,24 +10,24 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelpler extends SQLiteOpenHelper {
 
-//数据库名字
+    //数据库名字
     private final static String DATABASE_NAME = "wordsdb";
-//数据库版本
+    //数据库版本
     private final static int DATABASE_VERSION = 1;
 
-//创建表
+    //创建表
     final String sql = "CREATE TABLE " + word.w.TABLE_NAME +  " (" +  word.w.COLUMN_NAME_WORD + " TEXT PRIMARY KEY,"  +
             word.w.COLUMN_NAME_V + " TEXT,"
             + word.w.COLUMN_NAME_NOTES + " TEXT," +
             word.w.COLUMN_NAME_EXAMPLE + " TEXT" + " )";
-//删除表
+    //删除表
     private final static String SQL_DELETE_DATABASE = "DROP TABLE IF EXISTS " + word.w.TABLE_NAME;
 
     public DatabaseHelpler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public DatabaseHelpler( Context context,  String name,  SQLiteDatabase.CursorFactory factory, int version) {
+    public DatabaseHelpler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 

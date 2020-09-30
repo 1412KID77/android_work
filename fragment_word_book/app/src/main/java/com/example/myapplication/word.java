@@ -1,5 +1,4 @@
-package com.example.wrod_book;
-
+package com.example.myapplication;
 import android.provider.BaseColumns;
 
 public class word{
@@ -60,6 +59,6 @@ public class word{
         public static final String COLUMN_NAME_V="v";
         public static final String COLUMN_NAME_NOTES="notes";
         public static final String COLUMN_NAME_EXAMPLE="example";
-}
+    }
 
 }
