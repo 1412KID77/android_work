@@ -51,6 +51,7 @@ public class binary_conversion extends AppCompatActivity {
 
 
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //System.out.println("在这输出位置" + position);

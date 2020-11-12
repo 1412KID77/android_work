@@ -69,17 +69,17 @@ public class length extends AppCompatActivity{
             }
         });
 
-        if(position1 == 0 && position2 == 0){
-            output_textview.setText(input_EdiText.getText());
-        }else if(position1 == 0 && position2 == 1){
-            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 1000 + "");
-        }else if(position1 == 0 && position2 == 2){
-            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 10000 + "");
-        }else if(position1 == 0 && position2 == 3){
-            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 100000 + "");
-        }else if(position1 == 0 && position2 == 4){
-            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 1000000 + "");
-        }
+//        if(position1 == 0 && position2 == 0){
+//            output_textview.setText(input_EdiText.getText());
+//        }else if(position1 == 0 && position2 == 1){
+//            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 1000 + "");
+//        }else if(position1 == 0 && position2 == 2){
+//            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 10000 + "");
+//        }else if(position1 == 0 && position2 == 3){
+//            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 100000 + "");
+//        }else if(position1 == 0 && position2 == 4){
+//            output_textview.setText(Double.parseDouble(input_EdiText.getText().toString()) * 1000000 + "");
+//        }
         change.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override

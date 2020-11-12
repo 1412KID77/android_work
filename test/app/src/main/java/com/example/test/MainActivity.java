@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button phone;
     Button write_data;
-
+    Button duo;
 
     String SharedPreferencesFileName = "information";
     String key_userName = "userName";
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
     Button star_service;
     Button stop_service;
 
+     int n = 10;
+     boolean result;
+
     private static String TAG = "LIFECYCLE";
 
 //    @Override
@@ -51,12 +55,15 @@ public class MainActivity extends AppCompatActivity {
 //
 //    }
 //}
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        duo = findViewById(R.id.duo);
         star_service = (Button)findViewById(R.id.start_service);
         stop_service = (Button)findViewById(R.id.stop_service);
 
@@ -68,24 +75,42 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         preferences = getSharedPreferences(SharedPreferencesFileName, MODE_PRIVATE);
         editor = preferences.edit();
 
 
 
+
+
         Log.i(TAG, "(1)onCreate()");
+
+
+
+
+
+        duo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread("计算"){
+                    @Override
+                    public void run() {
+                        if (n <= 3){
+                            result = false;
+                        }
+                            for(int i = 2; i < n; i++){
+                                if(n % i == 0){
+                                    result = true;
+                                }
+                            }
+
+                    }
+                }.start();
+                Toast.makeText(MainActivity.this, "是否为素数" + result, Toast.LENGTH_LONG).show();
+
+            }
+
+        });
+
 
         write_data = (Button)findViewById(R.id.write_data);
         write_data.setOnClickListener(new View.OnClickListener() {

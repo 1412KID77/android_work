@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_activity"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+
+        />
+
+    <TextView
+        android:id="@+id/textView_currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="00:00"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/seekbar"
+        app:layout_constraintRight_toLeftOf="@+id/seekbar"
+        />
+
+    <TextView
+        android:id="@+id/textView_totalLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/seekbar"
+        app:layout_constraintLeft_toRightOf="@+id/seekbar"
+        />
+
+    <Button
+        android:id="@+id/floatingActionButton_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.6"
+
+        />
+
+    <Button
+        android:id="@+id/floatingActionButton_nextSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="下一曲"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <Button
+        android:id="@+id/floatingActionButton_lastSong"
+        android:text="上一曲"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <Switch
+        android:id="@+id/switch_randomPlay"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
+        android:text="随机"
+        android:textAlignment="center"
+        android:textOff="@string/order_play"
+        android:textOn="@string/random_play"
+        app:layout_constraintTop_toBottomOf="@+id/button_songList"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/button_songList"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="歌单"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text=""
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

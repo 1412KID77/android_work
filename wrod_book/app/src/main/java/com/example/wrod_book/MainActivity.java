@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -131,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                            //    Toast.makeText(MainActivity.this, "选择了" + items[which], Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "选择了" + items[which], Toast.LENGTH_LONG).show();
                                 if(which == 0){
                                     AlertDialog.Builder tempb = new AlertDialog.Builder(MainActivity.this);
 
@@ -177,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                 builder.create().show();
-                return false;
+                return true;
             }
         });
 
@@ -245,7 +246,6 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelpler(this);
 
     }
-
 
 
 //menu
